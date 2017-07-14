@@ -28,5 +28,7 @@ function executeCommands(text) {
     });
   }
 
-  return text;
+  const result = text.replace(regex, '');
+
+  return result;
 }
