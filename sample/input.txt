@@ -1,0 +1,29 @@
+Welcome to MediumDesk
+
+A Minimal Desktop App for Medium developed by Medium enthusiasts
+
+MediumDesk is a simple app that lets you read and write Medium stories when you are at your desk.
+MediumDesk extends medium.com’s experience to desktops. It is built by Medium enthusiasts with no intention to modify/replace any experience. I love /CLO emoji here/ Medium as it is. But a desktop app can do a few little things that a web app can’t and it gives a permanent home for Medium in my desktop. That is what MediumDesk is for. Every new feature will be selected based on this question : “Would Medium do it, If they built a desktop app?”.
+
+
+/CLO insert screenshot 1 here.
+
+The first goal is to be able to use medium.com without any issues in it’s own window. So it is always accessible through your Applications folder, Dock / Task Bar, Search. To find your draft, you don’t have to dig through browser tabs anymore. Additionally MediumDesk comes with Native Menus & Shortcuts for commonly used functions 
+
+Cmd N / Ctrl N  - New Story
+Cmd F / Ctrl F -  Search Medium
+Cmd 0 / Ctrl 0  -  Home
+Cmd 1 / Ctrl 1  - Drafts
+Cmd 2 / Ctrl 2  - Public Stories
+Cmd 3 / Ctrl 3  - Stats
+Cmd 4 / Ctrl 4  - Bookmarks
+Cmd 5 / Ctrl 5  - Publications
+Cmd 6 / Ctrl 6  - Profile
+Cmd 7 / Ctrl 7  - Settings
+
+/CLO make that a table. Separate the columns by -
+
+/CLO insert medium desk logo here. Add MediumDesk as caption
+
+Download the app today, and enjoy the best of Medium on your desktop.
+The source code is open. If you are a Medium user interested to contribute to the experience of other medium users, come join me here /CLO insert my Github url
