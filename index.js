@@ -1,9 +1,14 @@
 var fs = require('fs');
+var emoji = require('./commands/emoji')
+var image = require('./commands/image')
+var table = require('./commands/table')
+var url = require('./commands/url')
+
+var re = /\/(image|url|table|emoji)[^\n\/]*[\n\/]/i;
+
 
 fs.readFile('sample/input.txt', 'utf8', function (err, contents) {
-
   result = executeCommands(contents);
-
   fs.writeFile("sample/output.html", result, function (err) {
     if (err) {
       return console.log("Error writing file");
@@ -13,22 +18,26 @@ fs.readFile('sample/input.txt', 'utf8', function (err, contents) {
 });
 
 function executeCommands(text) {
-  const regex = /\/CLO[^\n\/]*[\n\/]/gi;
-  let m;
-
-  while ((m = regex.exec(text)) !== null) {
-    // This is necessary to avoid infinite loops with zero-width matches
-    if (m.index === regex.lastIndex) {
-      regex.lastIndex++;
-    }
-
-    // The result can be accessed through the `m`-variable.
-    m.forEach((match, groupIndex) => {
-      console.log(`Found match at ${regex.lastIndex}, group ${groupIndex}: ${match}`);
-    });
+  while (match = text.match(re)) {
+    result = executeCommand(text, match[1], match[0], match.index);
+    text = text.replace(re, result);
   }
+  return text;
+}
 
-  const result = text.replace(regex, '');
-
-  return result;
+function executeCommand(text, command, fullCommand, lineno) {
+  console.log("Executing Command : " + command);
+  switch (command) {
+    case "emoji":
+      return emoji.execute(text, fullCommand, lineno);
+    case "image":
+      return image.execute(text, fullCommand, lineno);
+    case "table":
+      return table.execute(text, fullCommand, lineno);
+    case "url":
+      return url.execute(text, fullCommand, lineno);
+    default:
+      break;
+  }
+  
 }
