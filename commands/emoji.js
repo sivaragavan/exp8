@@ -1,4 +1,4 @@
 
-exports.execute = function(text, fullCommand, lineno) {
+module.exports = (text, fullCommand, lineno) => {
   return '💚';
 }

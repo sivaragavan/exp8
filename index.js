@@ -29,13 +29,13 @@ function executeCommand(text, command, fullCommand, lineno) {
   console.log("Executing Command : " + command);
   switch (command) {
     case "emoji":
-      return emoji.execute(text, fullCommand, lineno);
+      return emoji(text, fullCommand, lineno);
     case "image":
-      return image.execute(text, fullCommand, lineno);
+      return image(text, fullCommand, lineno);
     case "table":
-      return table.execute(text, fullCommand, lineno);
+      return table(text, fullCommand, lineno);
     case "url":
-      return url.execute(text, fullCommand, lineno);
+      return url(text, fullCommand, lineno);
     default:
       break;
   }
